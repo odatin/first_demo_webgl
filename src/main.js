@@ -4,6 +4,10 @@ import * as THREE from 'three';
 const canvas = document.querySelector('#webgl');
 const scene = new THREE.Scene();
 
+const textureLoader = new THREE.TextureLoader();
+const bgtexture = textureLoader.load('bg/scenebg.jpg');
+scene.background = bgtexture;
+
 const sizes = {
   width: innerWidth,
   height: innerHeight
